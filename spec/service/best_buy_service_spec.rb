@@ -18,7 +18,7 @@ require 'rails_helper'
 
       expect(stores).to_not have_key(:bestbuy)
 
-      expect(stores[:stores].count).to eq(10)
+      expect(stores[:stores].count).to eq(16)
       expect(stores[:stores].count).to_not eq(9)
 
       expect(stores[:total]).to eq(16)

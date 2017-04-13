@@ -13,10 +13,10 @@ require 'rails_helper'
       expect(first_store.distance).to eq(3.45)
       expect(first_store.store_type).to eq("Mobile SAS")
 
-      expect(last_store.name).to eq("SOUTHGLENN CO")
-      expect(last_store.phone).to eq("303-797-3246")
-      expect(last_store.city).to eq("CENTENNIAL")
-      expect(last_store.distance).to eq(11.02)
+      expect(last_store.name).to eq("BOULDER CO")
+      expect(last_store.phone).to eq("303-938-2889")
+      expect(last_store.city).to eq("BOULDER")
+      expect(last_store.distance).to eq(22.79)
       expect(last_store.store_type).to eq("Big Box")
 
       expect(first_store.name).to_not eq("LAKEWOOD")
