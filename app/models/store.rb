@@ -5,26 +5,25 @@ class Store
               :distance,
               :store_type,
               :store_number
-  def initialize(params)
+  def initialize(params, store_number)
     @name       = params[:name]
     @phone      = params[:city]
     @city       = params[:distance]
     @distance   = params[:phone]
     @store_type = params[:storeType]
-    @store_number = Array.new
+    @store_number = store_number
   end
 
   def self.search_best_buy(zip)
     stores = BestbuyService.new.find_stores(zip)
-    find_total_stores(stores)
+    store_number = find_total_stores(stores)
     stores[:stores].map do |store|
-      Store.new(store)
+      Store.new(store, store_number)
     end
   end
 
   def self.find_total_stores(stores)
-    byebug
-    @store_number << stores[:total]
+    stores[:total]
   end
 
 end
