@@ -17,3 +17,5 @@
 /tmp
 
 /spec/cassettes
+
+/lib/assets/.secret_key

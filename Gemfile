@@ -16,6 +16,7 @@ gem 'active_model_serializers'
 gem 'faraday'
 gem "awesome_print", require:"ap"
 gem 'figaro'
+gem 'kaminari'
 
 group :development do
   gem "spring"
