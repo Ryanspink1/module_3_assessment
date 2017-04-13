@@ -8,8 +8,7 @@ class Store
   #   @store_type =
   # end
 
-  def search_best_buy
-    stores =BestBuyService.new.find_stores(zip, distance)
-    byebug
+  def self.search_best_buy(zip)
+    BestbuyService.new.find_stores(zip)
   end
 end
