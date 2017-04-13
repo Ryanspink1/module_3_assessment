@@ -17,6 +17,7 @@ gem 'faraday'
 gem "awesome_print", require:"ap"
 gem 'figaro'
 gem 'kaminari'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development do
   gem "spring"
