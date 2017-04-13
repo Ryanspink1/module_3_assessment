@@ -7,9 +7,9 @@ class Store
               :store_number
   def initialize(params, store_number)
     @name       = params[:name]
-    @phone      = params[:city]
-    @city       = params[:distance]
-    @distance   = params[:phone]
+    @phone      = params[:phone]
+    @city       = params[:city]
+    @distance   = params[:distance]
     @store_type = params[:storeType]
     @store_number = store_number
   end
