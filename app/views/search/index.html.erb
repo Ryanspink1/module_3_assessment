@@ -1,12 +1,16 @@
 <h1>Stores within 25 miles of searched zipcode</h1>
 <p><%= @stores.first.store_number %> Total Stores</p>
 
-<% @stores.each do |store| %>
-  <ul>
-    <li>Name: <%= store.name %></li>
-    <li>City: <%= store.city %></li>
-    <li>Distance: <%= store.distance %></li>
-    <li>Phone Number: <%= store.phone %></li>
-    <li>Store Type: <%= store.store_type %></li>
-  </ul>
-<% end %>
+<div class="stores">
+  <% @stores.each do |store| %>
+    <div class="store">
+      <ul>
+        <li>Name: <%= store.name %></li>
+        <li>City: <%= store.city %></li>
+        <li>Distance: <%= store.distance %></li>
+        <li>Phone Number: <%= store.phone %></li>
+        <li>Store Type: <%= store.store_type %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>
