@@ -6,7 +6,7 @@ class BestbuyService
 
 
   def find_stores(zip)
-    parse(@connection.get("(area(#{zip},25))?format=json&show=storeType,name,city,distance,phone&pageSize=10&apiKey=#{@secret}"))
+    parse(Faraday.new("https://api.bestbuy.com/v1/stores(area(#{zip},25))?format=json&show=storeType,name,city,distance,phone&pageSize=10&apiKey=#{@secret}").get)
   end
 
 private
@@ -17,4 +17,4 @@ private
 end
 
 
-curl "https://api.bestbuy.com/v1/stores(area(55423,10))?format=json&show=storeId,storeType,name&pageSize=2&apiKey=YourAPIKey"
+# curl "https://api.bestbuy.com/v1/stores(area(80202,25))?format=json&show=storeType,name,city,distance,phone&pageSize=2&apiKey=YourAPIKey"
